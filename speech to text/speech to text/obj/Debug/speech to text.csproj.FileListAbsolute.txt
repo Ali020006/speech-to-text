@@ -1,0 +1,11 @@
+C:\Users\Ali\source\repos\speech to text\speech to text\bin\Debug\speech to text.exe.config
+C:\Users\Ali\source\repos\speech to text\speech to text\bin\Debug\speech to text.exe
+C:\Users\Ali\source\repos\speech to text\speech to text\bin\Debug\speech to text.pdb
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech to text.csproj.AssemblyReference.cache
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech_to_text.Form1.resources
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech_to_text.Properties.Resources.resources
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech to text.csproj.GenerateResource.cache
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech to text.csproj.CoreCompileInputs.cache
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech to text.exe
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech to text.pdb
+C:\Users\Ali\source\repos\speech to text\speech to text\obj\Debug\speech to text.exe.config
