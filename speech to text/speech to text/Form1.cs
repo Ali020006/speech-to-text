@@ -30,26 +30,23 @@ namespace speech_to_text
             MessageBox.Show(info);
             try
             {
-                // Türkçe tanıma için kültür ayarı
-                // Eğer Windows'ta Türkçe konuşma paketi yüklü değilse hata verebilir.
-                // Yüklü değilse "en-US" (İngilizce) deneyebilirsin.
-                recEngine = new SpeechRecognitionEngine(); // Varsayılan dili (İngilizce'yi) kullanır
+               
+                recEngine = new SpeechRecognitionEngine(); 
 
-                // Giriş olarak varsayılan ses cihazını (mikrofonu) ayarla
+               
                 recEngine.SetInputToDefaultAudioDevice();
 
-                // Tanınacak kelimeler için bir dil bilgisi (grammar) yükle
-                // DictationGrammar, serbest konuşmayı tanımak için kullanılır
+               
                 recEngine.LoadGrammar(new DictationGrammar());
 
-                // Konuşma tanındığında hangi metodun çalışacağını belirle
+                
                 recEngine.SpeechRecognized += RecEngine_SpeechRecognized;
 
-                // (İsteğe bağlı) Konuşma algılandı ama anlaşılamadıysa
+            
                 recEngine.SpeechRecognitionRejected += RecEngine_SpeechRecognitionRejected;
 
                 lblDurum.Text = "Hazır. Başlat butonuna basın.";
-                btnDurdur.Enabled = false; // Başlangıçta durdur butonu pasif olsun
+                btnDurdur.Enabled = false; 
             }
             catch (Exception ex)
             {
@@ -60,12 +57,12 @@ namespace speech_to_text
         }
         private void RecEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            // Tanınan metni al ve TextBox'a ekle
+            
             txtSonuc.AppendText(e.Result.Text + Environment.NewLine);
             lblDurum.Text = "Konuşma algılandı...";
         }
 
-        // Konuşma algılandı ama ANLAŞILAMADIYSA bu metot çalışır
+       
         private void RecEngine_SpeechRecognitionRejected(object sender, SpeechRecognitionRejectedEventArgs e)
         {
             lblDurum.Text = "Konuşma anlaşılamadı.";
@@ -75,7 +72,7 @@ namespace speech_to_text
         {
             try
             {
-                // Asenkron olarak dinlemeye başla (birden fazla kelime için)
+                
                 recEngine.RecognizeAsync(RecognizeMode.Multiple);
 
                 btnBaslat.Enabled = false;
@@ -98,3 +95,4 @@ namespace speech_to_text
         }
     }
 }
+
